@@ -54,4 +54,6 @@ public class OverwriteProxySelectorTest {
 		assertEquals(Proxy.NO_PROXY, tempProxy.get(0));
 	}
 
+	
+
 }
