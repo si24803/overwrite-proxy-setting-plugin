@@ -45,6 +45,9 @@ public class OverwriteMavenProxyPlugin extends AbstractMojo {
 	@Parameter(property = "overwrite-nonProxyHosts", required = false)
 	private String nonProxyHosts;
 
+	@Parameter(property = "overwrite-protocol", required = false)
+	private String protocol;
+
 	/**
 	 * Fast skip all activities of this plugin via -Doverwrite.proxy.skip=true
 	 */
@@ -128,7 +131,7 @@ public class OverwriteMavenProxyPlugin extends AbstractMojo {
 			mavenProxy.setHost(proxyHost);
 			mavenProxy.setPort(proxyPort);
 			mavenProxy.setNonProxyHosts(nonProxyHosts);
-			mavenProxy.setProtocol("https");
+			mavenProxy.setProtocol(protocol);
 			mavenProxy.setUsername(proxyUser);
 			mavenProxy.setPassword(proxyPassword);
 		}
