@@ -35,6 +35,7 @@ public class OverwriteProxySelector extends ProxySelector {
 	public OverwriteProxySelector() {
 		super();
 		LOGGER.debug("Created {}", this);
+		ProxySelector.setDefault(this);
 	}
 
 	/**
